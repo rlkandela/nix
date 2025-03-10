@@ -106,7 +106,7 @@
             "com.apple.mouse.tapBehavior" = 1;
           };
 	  dock = {
-	    minimize-to-application = true;
+	    minimize-to-application = false;
 	    mru-spaces = false;
 	    show-recents = false;
 	    persistent-apps = [
