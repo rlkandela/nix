@@ -18,6 +18,7 @@
 	  pkgs.mkalias
           pkgs.neovim
 	  pkgs.nerd-fonts.jetbrains-mono
+	  pkgs.pyenv
         ];
 
 	homebrew = {
@@ -30,11 +31,17 @@
 	    "iterm2"
 	    "obsidian"
 	    "hiddenbar"
+	    "openvpn-connect"
+	    "github"
 	  ];
 	  brews = [
 	    "gpg2"
 	    "gnupg"
 	    "pinentry-mac"
+	    "nvm"
+	    "wireshark"
+	    "readline"
+	    "xz"
 	  ];
 	  masApps = {
             # "AppName" = <app id>;
@@ -104,6 +111,8 @@
 	  };
           NSGlobalDomain = {
             "com.apple.mouse.tapBehavior" = 1;
+	    "com.apple.keyboard.fnState" = false;
+	    ApplePressAndHoldEnabled = false;
           };
 	  dock = {
 	    minimize-to-application = false;
@@ -112,10 +121,12 @@
 	    persistent-apps = [
               "/System/Applications/System Settings.app"
               "/System/Cryptexes/App/System/Applications/Safari.app"
+	      # "/Applications/Microsoft Outlook.app"
 	      "/Applications/Arc.app"
 	      "/Applications/iTerm.app"
 	      "/Applications/Docker.app"
 	      "/Applications/Visual Studio Code.app"
+	      "/Applications/Spotify.app"
 	      "/Applications/Obsidian.app"
 	    ];
 	  };
