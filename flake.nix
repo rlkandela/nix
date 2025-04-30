@@ -19,6 +19,7 @@
           pkgs.neovim
 	  pkgs.nerd-fonts.jetbrains-mono
 	  pkgs.pyenv
+    pkgs.nodejs_23
         ];
 
 	homebrew = {
@@ -146,6 +147,20 @@
 	};
       };
     };
+
+    # Nix Homebrew
+    nix-brew = { pkgs, ... }: nix-homebrew.darwinModules.nix-homebrew
+      {
+        lib = pkgs.lib;
+        nix-homebrew = {
+          enable = true;
+          # Apple Silicon Only
+          enableRosetta = true;
+          # User owning the Homebrew prefix
+          user = "raulcandelaarias";
+          mutableTasp = false;
+        };
+      };
   in
   {
     # Build darwin flake using:
@@ -153,14 +168,7 @@
     darwinConfigurations."m4pro" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
-	nix-homebrew.darwinModules.nix-homebrew
-	{
-	  nix-homebrew = {
-	    enable = true;
-	    enableRosetta = true;
-            user = "raulcandelaarias";
-	  };
-	}
+	      nix-brew
       ];
     };
   };
