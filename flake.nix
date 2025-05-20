@@ -19,7 +19,7 @@
           pkgs.neovim
 	  pkgs.nerd-fonts.jetbrains-mono
 	  pkgs.pyenv
-    pkgs.nodejs_23
+    pkgs.nodejs_24
         ];
 
 	homebrew = {
@@ -34,6 +34,7 @@
 	    "hiddenbar"
 	    "openvpn-connect"
 	    "github"
+      "warp"
 	  ];
 	  brews = [
 	    "gpg2"
@@ -98,6 +99,7 @@
       # System settings
       security.pam.services.sudo_local.touchIdAuth = true;
       system = {
+        primaryUser = "raulcandelaarias";
         keyboard = {
           enableKeyMapping = true;
           remapCapsLockToEscape = true;
