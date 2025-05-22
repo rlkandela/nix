@@ -44,6 +44,7 @@
 	    "wireshark"
 	    "readline"
 	    "xz"
+      "jj"
 	  ];
 	  masApps = {
             # "AppName" = <app id>;
