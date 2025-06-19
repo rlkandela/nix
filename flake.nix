@@ -45,6 +45,8 @@
 	    "readline"
 	    "xz"
       "jj"
+      "kind"
+      "kubernetes-cli"
 	  ];
 	  masApps = {
             # "AppName" = <app id>;
