@@ -20,6 +20,7 @@
 	  pkgs.nerd-fonts.jetbrains-mono
 	  pkgs.pyenv
     pkgs.nodejs_24
+    pkgs.awscli2
         ];
 
 	homebrew = {
@@ -134,6 +135,9 @@
 	      "/Applications/Visual Studio Code.app"
 	      "/Applications/Spotify.app"
 	      "/Applications/Obsidian.app"
+        "/Users/raulcandelaarias/Applications/Excalidraw.app"
+        "/Users/raulcandelaarias/Applications/To Do.app"
+        "/Users/raulcandelaarias/Applications/Clash Ninja.app"
 	    ];
 	  };
 	  finder = {
