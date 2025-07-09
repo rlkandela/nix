@@ -21,6 +21,7 @@
 	  pkgs.pyenv
     pkgs.nodejs_24
     pkgs.awscli2
+    pkgs.ripgrep
         ];
 
 	homebrew = {
