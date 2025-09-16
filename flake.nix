@@ -22,6 +22,7 @@
     pkgs.nodejs_24
     pkgs.awscli2
     pkgs.ripgrep
+    pkgs.minikube
         ];
 
 	homebrew = {
