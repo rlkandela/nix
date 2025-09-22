@@ -23,6 +23,7 @@
     pkgs.awscli2
     pkgs.ripgrep
     pkgs.minikube
+    pkgs.acme-sh
         ];
 
 	homebrew = {
