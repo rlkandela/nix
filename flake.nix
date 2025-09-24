@@ -15,15 +15,16 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-	  pkgs.mkalias
-          pkgs.neovim
-	  pkgs.nerd-fonts.jetbrains-mono
-	  pkgs.pyenv
+    pkgs.mkalias
+    pkgs.neovim
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.pyenv
     pkgs.nodejs_24
     pkgs.awscli2
     pkgs.ripgrep
     pkgs.minikube
     pkgs.acme-sh
+    pkgs.qemu
         ];
 
 	homebrew = {
