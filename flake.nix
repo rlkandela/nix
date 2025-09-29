@@ -52,6 +52,7 @@
           "kind"
           "kubernetes-cli"
           "qemu"
+          "watch"
         ];
         masApps = {
 # "AppName" = <app id>;
