@@ -24,6 +24,8 @@
           pkgs.ripgrep
           pkgs.minikube
           pkgs.acme-sh
+          pkgs.kubectl
+          pkgs.kubernetes-helm
         ];
 
       homebrew = {
@@ -50,7 +52,6 @@
           "xz"
           "jj"
           "kind"
-          "kubernetes-cli"
           "qemu"
           "watch"
         ];
