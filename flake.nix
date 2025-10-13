@@ -172,7 +172,8 @@
       enableRosetta = true;
 # User owning the Homebrew prefix
       user = "raulcandelaarias";
-      mutableTasp = false;
+      mutableTaps = false;
+      autoMigrate = true;
     };
   };
   in
@@ -182,7 +183,7 @@
     darwinConfigurations."m4pro" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
-          nix-brew
+        nix-brew
       ];
     };
   };
