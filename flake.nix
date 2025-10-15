@@ -24,8 +24,10 @@
           pkgs.ripgrep
           pkgs.minikube
           pkgs.acme-sh
+          pkgs.tmux
           pkgs.kubectl
           pkgs.kubernetes-helm
+          pkgs.k9s
         ];
 
       homebrew = {
