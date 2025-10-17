@@ -20,6 +20,7 @@
           pkgs.nerd-fonts.jetbrains-mono
           pkgs.pyenv
           pkgs.nodejs_24
+          pkgs.tokei
           pkgs.awscli2
           pkgs.ripgrep
           pkgs.minikube
