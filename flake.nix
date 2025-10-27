@@ -21,6 +21,7 @@
           pkgs.pyenv
           pkgs.nodejs_24
           pkgs.tokei
+          pkgs.ffmpeg-full
           pkgs.awscli2
           pkgs.ripgrep
           pkgs.minikube
@@ -36,6 +37,7 @@
         enable = true;
         casks = [
           "arc"
+          "vlc"
           "the-unarchiver"
           "iina"
           "hammerspoon"
