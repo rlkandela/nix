@@ -15,12 +15,13 @@
 # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-        pkgs.mkalias
+          pkgs.mkalias
           pkgs.neovim
           pkgs.nerd-fonts.jetbrains-mono
           pkgs.pyenv
           pkgs.nodejs_24
           pkgs.tokei
+          pkgs.difftastic
           pkgs.ffmpeg-full
           pkgs.awscli2
           pkgs.ripgrep
