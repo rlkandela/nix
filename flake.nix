@@ -17,6 +17,7 @@
         [
           pkgs.mkalias
           pkgs.neovim
+          pkgs.lazygit
           pkgs.nerd-fonts.jetbrains-mono
           pkgs.pyenv
           pkgs.nodejs_24
