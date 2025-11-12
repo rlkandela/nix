@@ -10,9 +10,24 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
     let
+    lazygit-overlay = final: prev: {
+      lazygit = prev.lazygit.overrideAttrs (old: rec {
+        version = "unstable-2025-11-12";
+        src = prev.fetchFromGitHub {
+          owner = "jesseduffield";
+          repo = "lazygit";
+          rev = "a7126d54569deae322e1bd6a8930e518912d6b3f";
+          sha256 = "sha256-23wX518lu4kplGXToazuUfLS30G+onRsEIpsbcLc7vo=";
+        };
+      });
+    };
+
+
+
     configuration = { pkgs, config, ... }: {
 # List packages installed in system profile. To search by name, run:
 # $ nix-env -qaP | grep wget
+      nixpkgs.overlays = [lazygit-overlay];
       environment.systemPackages =
         [
           pkgs.mkalias
