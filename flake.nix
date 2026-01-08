@@ -43,6 +43,7 @@
           pkgs.ripgrep
           pkgs.minikube
           pkgs.acme-sh
+          pkgs.gh
           pkgs.tmux
           pkgs.kubectl
           pkgs.kubernetes-helm
