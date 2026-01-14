@@ -36,6 +36,7 @@
           pkgs.nerd-fonts.jetbrains-mono
           pkgs.pyenv
           pkgs.nodejs_24
+          pkgs.claude-code
           pkgs.tokei
           pkgs.difftastic
           pkgs.ffmpeg-full
@@ -90,6 +91,7 @@
 # Allowed unfree licenses
       nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
 # "obsidian"
+        "claude-code"
       ];
 
 # Make apps installed by nix appear in spotlight search
