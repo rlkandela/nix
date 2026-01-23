@@ -39,6 +39,7 @@
           pkgs.nerd-fonts.jetbrains-mono
           pkgs.pyenv
           pkgs.nodejs_24
+          pkgs.bun
           pkgs.claude-code
           pkgs.opencode
           pkgs.tokei
