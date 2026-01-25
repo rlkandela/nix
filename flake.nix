@@ -63,6 +63,7 @@
           "arc"
           "vlc"
           "the-unarchiver"
+          "TheBoredTeam/boring-notch/boring-notch"
           "iina"
           "hammerspoon"
           "iterm2"
