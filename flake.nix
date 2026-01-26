@@ -55,6 +55,7 @@
           pkgs.kubernetes-helm
           pkgs.k9s
           pkgs.skaffold
+          pkgs.tilt
         ];
 
       homebrew = {
@@ -63,7 +64,6 @@
           "arc"
           "vlc"
           "the-unarchiver"
-          "TheBoredTeam/boring-notch/boring-notch"
           "iina"
           "hammerspoon"
           "iterm2"
