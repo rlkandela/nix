@@ -50,8 +50,9 @@
           pkgs.minikube
           pkgs.acme-sh
           pkgs.gh
-          pkgs.cz-cli
+          pkgs.commitizen
           pkgs.tmux
+          pkgs.ghostty-bin
           pkgs.kubectl
           pkgs.kubernetes-helm
           pkgs.k9s
