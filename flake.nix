@@ -170,7 +170,7 @@
                 "/System/Cryptexes/App/System/Applications/Safari.app"
 # "/Applications/Microsoft Outlook.app"
                 "/Applications/Arc.app"
-                "/Applications/iTerm.app"
+                "/Applications/Nix Apps/Ghostty.app"
                 "/Applications/Docker.app"
                 "/Applications/Visual Studio Code.app"
                 "/Applications/Spotify.app"
