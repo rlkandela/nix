@@ -43,6 +43,7 @@
           pkgs.claude-code
           pkgs.opencode
           pkgs.tokei
+          pkgs.yq-go
           pkgs.difftastic
           pkgs.ffmpeg-full
           pkgs.awscli2
