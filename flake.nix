@@ -56,6 +56,7 @@
           pkgs.ghostty-bin
           pkgs.kubectl
           pkgs.kubernetes-helm
+          pkgs.argocd
           pkgs.k9s
           pkgs.skaffold
           pkgs.tilt
