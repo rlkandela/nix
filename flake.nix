@@ -58,6 +58,7 @@
           pkgs.kubernetes-helm
           pkgs.argocd
           pkgs.k9s
+          pkgs.stern
           pkgs.skaffold
           pkgs.tilt
         ];
