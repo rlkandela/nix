@@ -50,6 +50,7 @@
           pkgs.ripgrep
           pkgs.minikube
           pkgs.acme-sh
+          pkgs.golangci-lint
           pkgs.gh
           pkgs.commitizen
           pkgs.tmux
