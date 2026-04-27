@@ -3,24 +3,23 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-ffmpeg.url = "github:NixOS/nixpkgs/a6522db5b947cd7026a40d02acc3ca261364e9c8";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-ffmpeg, nix-homebrew }:
     let
-    # lazygit-overlay = final: prev: {
-    #   lazygit = prev.lazygit.overrideAttrs (old: rec {
-    #     version = "unstable-2025-11-12";
-    #     src = prev.fetchFromGitHub {
-    #       owner = "jesseduffield";
-    #       repo = "lazygit";
-    #       rev = "a7126d54569deae322e1bd6a8930e518912d6b3f";
-    #       sha256 = "sha256-23wX518lu4kplGXToazuUfLS30G+onRsEIpsbcLc7vo=";
-    #     };
-    #   });
-    # };
+
+    ffmpeg-pin-overlay = final: prev: 
+      let
+        pinnedPkgs = import nixpkgs-ffmpeg {
+          system = prev.stdenv.hostPlatform.system;
+        };
+      in {
+        ffmpeg-full = pinnedPkgs.ffmpeg-full;
+      };
 
 
 
@@ -29,7 +28,7 @@
 # $ nix-env -qaP | grep wget
       nixpkgs.overlays =
         [
-          # lazygit-overlay
+          ffmpeg-pin-overlay
         ];
       environment.systemPackages =
         [
