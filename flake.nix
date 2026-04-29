@@ -91,6 +91,7 @@
           "kind"
           "qemu"
           "watch"
+          "luarocks"
         ];
         masApps = {
 # "AppName" = <app id>;
@@ -166,6 +167,8 @@
             ApplePressAndHoldEnabled = false;
           };
           dock = {
+            autohide = true;
+            autohide-delay = 0.1;
             minimize-to-application = false;
             mru-spaces = false;
             show-recents = false;
