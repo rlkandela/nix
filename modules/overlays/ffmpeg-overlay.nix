@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.darwin.ffmpeg-overlay =
+  flake.overlays.ffmpeg =
     final: prev:
     let
       pinnedPkgs = import inputs.nixpkgs-ffmpeg {
