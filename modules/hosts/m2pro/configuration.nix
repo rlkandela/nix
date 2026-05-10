@@ -1,13 +1,12 @@
 { self, ... }:
 {
-
-  flake.modules.darwin.m4proConfig =
+  flake.modules.darwin.m2proConfig = 
     { pkgs, lib, ... }:
     {
       imports = [
-        self.modules.darwin.m4proPkgs
-        self.modules.darwin.m4proSystem
-        self.modules.darwin.m4proHomebrew
+        self.modules.darwin.m2proPkgs
+        self.modules.darwin.m2proSystem
+        self.modules.darwin.m2proHomebrew
         self.modules.darwin.appsInSpotlight
       ];
 
@@ -25,5 +24,5 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
-    };
+    }
 }
