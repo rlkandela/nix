@@ -45,7 +45,7 @@
             ShowMountedServersOnDesktop = true;
             ShowRemovableMediaOnDesktop = true;
           };
-        }
+        };
       };
     };
 }

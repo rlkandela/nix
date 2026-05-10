@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.modules.darwin.m2proConfig = 
+  flake.modules.darwin.m2proConfig =
     { pkgs, lib, ... }:
     {
       imports = [
@@ -24,5 +24,5 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
-    }
+    };
 }
