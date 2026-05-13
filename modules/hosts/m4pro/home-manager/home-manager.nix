@@ -12,6 +12,8 @@
         primaryUser = "raulcandelaarias";
         sharedModules = [
           self.modules.homeManager.ghosttyConfig
+          self.modules.homeManager.m4proHomeManagerSettings
+          self.modules.homeManager.neovim
         ];
       };
     };
