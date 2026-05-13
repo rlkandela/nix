@@ -8,6 +8,7 @@
         self.modules.darwin.m4proPkgs
         self.modules.darwin.m4proSystem
         self.modules.darwin.m4proHomebrew
+        self.modules.darwin.m4proHomeManager
         self.modules.darwin.appsInSpotlight
       ];
 
@@ -15,6 +16,12 @@
         "nix-command"
         "flakes"
       ];
+
+      # System user
+      users.users.raulcandelaarias = {
+        name = "raulcandelaarias";
+        home = "/Users/raulcandelaarias";
+      };
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
