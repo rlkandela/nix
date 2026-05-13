@@ -20,6 +20,7 @@
         masApps = {
           "Yoink" = 457622435;
           "PowerPoint" = 462062816;
+	  "CotEditor" = 1024640650;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
