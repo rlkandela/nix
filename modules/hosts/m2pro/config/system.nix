@@ -30,7 +30,15 @@
             minimize-to-application = false;
             mru-spaces = false;
             show-recents = false;
-            # persistent-apps = [];
+            persistent-apps = [
+              "/Applications/Brave Browser.app"
+	      "/Applications/Nix Apps/Ghostty.app"
+	      "/Applications/Visual Studio Code.app"
+	      "/Applications/Docker.app"
+	      "/Applications/Spotify.app"
+	      "/Applications/uTorrent Web.app"
+	      "/Applications/Firefox.app"
+	    ];
           };
           finder = {
             _FXShowPosixPathInTitle = false;

@@ -16,6 +16,7 @@
         pkgs.nodejs_22
         pkgs.tmux
         pkgs.lazygit
+	pkgs.ghostty-bin
         pkgs.pyenv
         pkgs.gnupg
         pkgs.pinentry_mac
