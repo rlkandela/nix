@@ -12,8 +12,9 @@
         primaryUser = "rlkandela";
         sharedModules = [
           self.modules.homeManager.ghosttyConfig
+          self.modules.homeManager.m2proHomeManagerSettings
+          self.modules.homeManager.neovim
         ];
       };
     };
 }
-
