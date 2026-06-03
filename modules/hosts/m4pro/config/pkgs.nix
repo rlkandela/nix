@@ -15,6 +15,7 @@
       pkgs.bun
       pkgs.claude-code
       pkgs.opencode
+      pkgs.pyright
       pkgs.tokei
       pkgs.yq-go
       pkgs.difftastic
