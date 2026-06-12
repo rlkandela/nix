@@ -1,11 +1,18 @@
-{ ... }:
-{
-  flake.modules.homeManager.neovimConfig =
-    { lib, config, ... }:
+_: {
+  flake.modules.homeManager.neovimConfig = {
+    lib,
+    config,
+    ...
+  }:
     lib.mkIf config.my.neovim.enable {
       programs.nvf.settings.vim = {
         viAlias = true;
         vimAlias = true;
+
+        clipboard = {
+          enable = true;
+          registers = "unnamedplus";
+        };
 
         options = {
           tabstop = 2;
@@ -14,6 +21,8 @@
           smartindent = true;
           wrap = false;
           updatetime = 250;
+          foldlevel = 99;
+          foldlevelstart = 99;
         };
 
         lineNumberMode = "relNumber";
@@ -40,7 +49,7 @@
           borders.enable = true;
           noice.enable = true;
           colorizer.enable = true;
-          modes-nvim.enable = true;
+          modes-nvim.enable = false;
           illuminate.enable = true;
           breadcrumbs = {
             enable = true;
@@ -178,7 +187,6 @@
             silent = true;
             desc = "Window up";
           }
-
         ];
       };
     };
