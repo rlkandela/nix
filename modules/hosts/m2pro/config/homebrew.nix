@@ -18,6 +18,8 @@ _: {
         "Yoink" = 457622435;
         "PowerPoint" = 462062816;
         "CotEditor" = 1024640650;
+        "Whatsapp" = 310633997;
+        "Telegram" = 747648890;
       };
       onActivation = {
         # Using ZAP requires to use --force
