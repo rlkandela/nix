@@ -16,10 +16,10 @@ _: {
       ];
       masApps = {
         "Yoink" = 457622435;
-        "PowerPoint" = 462062816;
         "CotEditor" = 1024640650;
         "Whatsapp" = 310633997;
         "Telegram" = 747648890;
+        "UTM" = 1538878817;
       };
       onActivation = {
         # Using ZAP requires to use --force
