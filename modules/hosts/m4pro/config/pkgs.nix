@@ -1,12 +1,8 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   flake.modules.darwin.m4proPkgs = {pkgs, ...}: {
     nixpkgs.overlays = [
       # self.overlays.ffmpeg
-      self.overlays.helm
+      # self.overlays.helm
     ];
 
     environment.systemPackages = [
