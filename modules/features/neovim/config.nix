@@ -134,7 +134,10 @@ _: {
         };
         diagnostics = {
           enable = true;
-          config.virtual_text = true;
+          config = {
+            virtual_text = false;
+            virtual_lines = true;
+          };
         };
 
         keymaps = [
