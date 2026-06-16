@@ -38,6 +38,25 @@ _: {
         statusline.lualine = {
           enable = true;
           theme = "onedark";
+          activeSection = {
+            b = [
+              "{ 'filetype', icon_only = true }"
+              "{ 'filename', path = 1 }"
+            ];
+            c = [];
+            x = [
+              "{ 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } }"
+            ];
+            y = [
+              "{ 'diff', symbols = { added = ' ', modified = ' ', removed = ' ' } }"
+              "{ 'branch', icon = '' }"
+            ];
+          };
+
+          sectionSeparator = {
+            left = "";
+            right = "";
+          };
         };
 
         tabline.nvimBufferline.enable = true;
@@ -70,13 +89,29 @@ _: {
         };
 
         filetree.neo-tree.enable = true;
-        telescope.enable = true;
-
+        telescope = {
+          enable = true;
+          setupOpts = {
+            defaults = {
+              path_display = ["truncate"];
+              layout_config = {
+                width = 0.95;
+                horizontal.preview_width = 0.4;
+              };
+            };
+          };
+        };
         treesitter = {
           enable = true;
           autotagHtml = true;
           fold = true;
-          context.enable = true;
+          context = {
+            enable = true;
+            setupOpts = {
+              max_lines = 1;
+              multiline_threshold = 1;
+            };
+          };
           textobjects.enable = true;
         };
 
@@ -87,6 +122,21 @@ _: {
           lightbulb.enable = true;
           trouble.enable = true;
           nvim-docs-view.enable = true;
+          mappings = {
+            goToDefinition = "gd";
+            goToDeclaration = "gD";
+            goToType = "gy";
+            listImplementations = "gi";
+            listReferences = "gr";
+
+            hover = "K";
+            signatureHelp = "<leader>k";
+
+            codeAction = "<leader>ca";
+            renameSymbol = "<leader>rn";
+
+            listDocumentSymbols = "<leader>ds";
+          };
         };
 
         languages = {
@@ -170,11 +220,11 @@ _: {
             desc = "Buffers";
           }
           {
-            key = "<C-l>";
+            key = "<C-h>";
             mode = "n";
-            action = "<C-w>l";
+            action = "<C-w>h";
             silent = true;
-            desc = "Window right";
+            desc = "Window left";
           }
           {
             key = "<C-j>";
@@ -189,6 +239,34 @@ _: {
             action = "<C-w>k";
             silent = true;
             desc = "Window up";
+          }
+          {
+            key = "<C-l>";
+            mode = "n";
+            action = "<C-w>l";
+            silent = true;
+            desc = "Window right";
+          }
+          {
+            key = "<Tab>";
+            mode = "n";
+            action = "<cmd>BufferLineCycleNext<CR>";
+            silent = true;
+            desc = "Next buffer";
+          }
+          {
+            key = "<S-Tab>";
+            mode = "n";
+            action = "<cmd>BufferLineCyclePrev<CR>";
+            silent = true;
+            desc = "Previous buffer";
+          }
+          {
+            key = "<leader>bx";
+            mode = "n";
+            action = "<cmd>bdelete<CR>";
+            silent = true;
+            desc = "Close buffer";
           }
         ];
       };
