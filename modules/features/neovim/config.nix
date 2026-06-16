@@ -23,6 +23,8 @@ _: {
           updatetime = 250;
           foldlevel = 99;
           foldlevelstart = 99;
+          exrc = true;
+          secure = true;
         };
 
         lineNumberMode = "relNumber";
@@ -146,7 +148,6 @@ _: {
 
           nix.enable = true;
           go.enable = true;
-          python.enable = true;
           java.enable = true;
           lua.enable = true;
           bash.enable = true;
@@ -157,6 +158,18 @@ _: {
           css.enable = true;
           sql.enable = true;
           rust.enable = false;
+
+          python = {
+            enable = true;
+            lsp = {
+              enable = true;
+              servers = ["basedpyright"];
+            };
+            format = {
+              enable = true;
+              type = ["ruff"];
+            };
+          };
         };
 
         autocomplete.nvim-cmp.enable = true;
