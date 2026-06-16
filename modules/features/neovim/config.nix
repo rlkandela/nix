@@ -43,7 +43,7 @@ _: {
           activeSection = {
             b = [
               "{ 'filetype', icon_only = true }"
-              "{ 'filename', path = 1 }"
+              "{ 'filename', path = 4 }"
             ];
             c = [];
             x = [
