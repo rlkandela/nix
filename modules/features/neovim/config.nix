@@ -176,6 +176,19 @@ _: {
         terminal.toggleterm = {
           enable = true;
           lazygit.enable = true;
+
+          setupOpts.float_opts = {
+            width = lib.generators.mkLuaInline ''
+              function()
+                return math.floor(vim.o.columns * 0.97)
+              end
+            '';
+            height = lib.generators.mkLuaInline ''
+              function()
+                return math.floor(vim.o.lines * 0.97)
+              end
+            '';
+          };
         };
         autopairs.nvim-autopairs.enable = true;
         debugger.nvim-dap = {
