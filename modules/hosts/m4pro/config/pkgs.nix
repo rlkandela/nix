@@ -8,6 +8,8 @@
     environment.systemPackages = [
       pkgs.mkalias
       pkgs.fzf
+      pkgs.isort
+      pkgs.direnv
       pkgs.neovim
       pkgs.lazygit
       pkgs.bruno

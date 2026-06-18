@@ -16,6 +16,24 @@ _: {
 
         luaConfigRC.telescopeFzf = ''
           vim.schedule(function()
+            require("telescope").setup({
+              defaults = {
+                path_display = { "truncate" },
+                layout_strategy = "horizontal",
+                layout_config = {
+                  width = 0.97,
+                  horizontal = { preview_width = 0.4 },
+                },
+              },
+              extensions = {
+                fzf = {
+                  fuzzy = true,
+                  override_generic_sorter = true,
+                  override_file_sorter = true,
+                  case_mode = "smart_case",
+                },
+              },
+            })
             pcall(require("telescope").load_extension, "fzf")
           end)
         '';
@@ -114,24 +132,7 @@ _: {
         };
 
         filetree.neo-tree.enable = true;
-        telescope = {
-          enable = true;
-          setupOpts = {
-            defaults = {
-              path_display = ["truncate"];
-              layout_config = {
-                width = 0.95;
-                horizontal.preview_width = 0.4;
-              };
-            };
-            extensions.fzf = {
-              fuzzy = true;
-              override_generic_sorter = true;
-              override_file_sorter = true;
-              case_mode = "smart_case";
-            };
-          };
-        };
+        telescope.enable = true;
         treesitter = {
           enable = true;
           autotagHtml = true;
@@ -196,7 +197,7 @@ _: {
             };
             format = {
               enable = true;
-              type = ["ruff"];
+              type = ["isort" "ruff"];
             };
           };
         };
@@ -219,17 +220,21 @@ _: {
           enable = true;
           lazygit.enable = true;
 
-          setupOpts.float_opts = {
-            width = lib.generators.mkLuaInline ''
-              function()
-                return math.floor(vim.o.columns * 0.97)
-              end
-            '';
-            height = lib.generators.mkLuaInline ''
-              function()
-                return math.floor(vim.o.lines * 0.97)
-              end
-            '';
+          setupOpts = {
+            direction = "float";
+
+            float_opts = {
+              width = lib.generators.mkLuaInline ''
+                function()
+                  return math.floor(vim.o.columns * 0.97)
+                end
+              '';
+              height = lib.generators.mkLuaInline ''
+                function()
+                  return math.floor(vim.o.lines * 0.97)
+                end
+              '';
+            };
           };
         };
         autopairs.nvim-autopairs.enable = true;
@@ -322,6 +327,34 @@ _: {
             action = "<cmd>bdelete<CR>";
             silent = true;
             desc = "Close buffer";
+          }
+          {
+            key = "<leader>xX";
+            mode = "n";
+            action = "<cmd>Trouble diagnostics toggle<CR>";
+            silent = true;
+            desc = "Toggle diagnostics [trouble]";
+          }
+          {
+            key = "<leader>xx";
+            mode = "n";
+            action = "<cmd>Trouble diagnostics toggle filter.buf=0<CR>";
+            silent = true;
+            desc = "Toggle buffer diagnostics [trouble]";
+          }
+          {
+            key = "<leader>tt";
+            mode = "n";
+            action = "<cmd>ToggleTerm<CR>";
+            silent = true;
+            desc = "Toggle terminal";
+          }
+          {
+            key = "<Esc><Esc>";
+            mode = "t";
+            action = "<C-\\><C-n>";
+            silent = true;
+            desc = "Exit terminal mode";
           }
         ];
       };
