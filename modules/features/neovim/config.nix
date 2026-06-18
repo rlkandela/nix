@@ -68,7 +68,13 @@ _: {
         notify.nvim-notify.enable = true;
         ui = {
           borders.enable = true;
-          noice.enable = true;
+          noice = {
+            enable = true;
+
+            setupOpts = {
+              lsp.progress.enabled = false;
+            };
+          };
           colorizer.enable = true;
           modes-nvim.enable = false;
           illuminate.enable = true;
@@ -87,7 +93,13 @@ _: {
           nvim-web-devicons.enable = true;
           indent-blankline.enable = true;
           cellular-automaton.enable = false;
-          fidget-nvim.enable = true;
+          fidget-nvim = {
+            enable = true;
+
+            setupOpts = {
+              progress.ignore = ["null-ls"];
+            };
+          };
         };
 
         filetree.neo-tree.enable = true;
