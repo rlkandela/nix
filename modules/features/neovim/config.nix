@@ -2,12 +2,23 @@ _: {
   flake.modules.homeManager.neovimConfig = {
     lib,
     config,
+    pkgs,
     ...
   }:
     lib.mkIf config.my.neovim.enable {
       programs.nvf.settings.vim = {
         viAlias = true;
         vimAlias = true;
+
+        startPlugins = [
+          pkgs.vimPlugins.telescope-fzf-native-nvim
+        ];
+
+        luaConfigRC.telescopeFzf = ''
+          vim.schedule(function()
+            pcall(require("telescope").load_extension, "fzf")
+          end)
+        '';
 
         clipboard = {
           enable = true;
@@ -112,6 +123,12 @@ _: {
                 width = 0.95;
                 horizontal.preview_width = 0.4;
               };
+            };
+            extensions.fzf = {
+              fuzzy = true;
+              override_generic_sorter = true;
+              override_file_sorter = true;
+              case_mode = "smart_case";
             };
           };
         };

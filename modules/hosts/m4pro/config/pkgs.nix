@@ -7,6 +7,7 @@
 
     environment.systemPackages = [
       pkgs.mkalias
+      pkgs.fzf
       pkgs.neovim
       pkgs.lazygit
       pkgs.bruno

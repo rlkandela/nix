@@ -7,6 +7,7 @@
 
     environment.systemPackages = [
       pkgs.nixfmt
+      pkgs.fzf
       pkgs.alacritty
       pkgs.mkalias
       pkgs.neovim
