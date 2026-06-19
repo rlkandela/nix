@@ -57,14 +57,19 @@ in {
     };
   };
 
-  perSystem = {pkgs, ...}: {
+  perSystem = {
+    pkgs,
+    lib,
+    ...
+  }: {
     packages.nvim =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [
           {
             vim = mkNvimSettings {
-              inherit (pkgs) lib;
+              inherit pkgs;
+              inherit lib;
               theme = defaultTheme;
             };
           }
