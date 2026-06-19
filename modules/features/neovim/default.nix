@@ -65,6 +65,7 @@ in {
     packages.nvim =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
+        inherit lib;
         modules = [
           {
             vim = mkNvimSettings {
