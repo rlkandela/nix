@@ -1,9 +1,9 @@
 {
-  self,
+  config,
   inputs,
   ...
 }: let
-  inherit (self.lib) mkNvimSettings;
+  inherit (config.flake.lib) mkNvimSettings;
   defaultTheme = {
     enable = true;
     name = "catppuccin";
@@ -65,12 +65,10 @@ in {
     packages.nvim =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
-        inherit lib;
         modules = [
           {
             vim = mkNvimSettings {
-              inherit pkgs;
-              inherit lib;
+              inherit pkgs lib;
               theme = defaultTheme;
             };
           }
