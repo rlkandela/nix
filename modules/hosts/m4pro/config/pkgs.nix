@@ -1,8 +1,13 @@
-{inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.modules.darwin.m4proPkgs = {pkgs, ...}: {
     nixpkgs.overlays = [
       # self.overlays.ffmpeg
       # self.overlays.helm
+      self.overlays.sqlfluff
     ];
 
     environment.systemPackages = [
@@ -41,6 +46,7 @@
       pkgs.stern
       pkgs.skaffold
       pkgs.tilt
+      pkgs.cloudflared
     ];
 
     # Allowed unfree licenses

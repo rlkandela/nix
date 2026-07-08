@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-sqlfluff.url = "github:NixOS/nixpkgs/dbdc12870cdde7e189abbbb32cdb0a8a4502ccad";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
