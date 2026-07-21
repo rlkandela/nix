@@ -37,7 +37,8 @@
       pkgs.commitizen
       pkgs.tmux
       pkgs.ghostty-bin
-      pkgs.kubectl
+      # hiPrio para ganar la colision con el kubectl que trae pkgs.minikube
+      (pkgs.lib.hiPrio pkgs.kubectl)
       pkgs.kubernetes-helm
       pkgs.argocd
       pkgs.k9s
