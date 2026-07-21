@@ -2,8 +2,8 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nixpkgs-sqlfluff.url = "github:NixOS/nixpkgs/dbdc12870cdde7e189abbbb32cdb0a8a4502ccad";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/b7620ae184e5bf4020e5dfebec3dd33a1508beac";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
