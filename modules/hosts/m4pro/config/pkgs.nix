@@ -32,6 +32,8 @@
       pkgs.acme-sh
       pkgs.golangci-lint
       pkgs.gh
+      pkgs.gnupg
+      pkgs.pinentry_mac
       pkgs.commitizen
       pkgs.tmux
       pkgs.ghostty-bin

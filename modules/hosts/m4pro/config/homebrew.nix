@@ -16,9 +16,6 @@ _: {
         "warp"
       ];
       brews = [
-        "gpg2"
-        "gnupg"
-        "pinentry-mac"
         "nvm"
         "wireshark"
         "readline"
