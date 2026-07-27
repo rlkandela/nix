@@ -20,11 +20,12 @@ _: {
         "Whatsapp" = 310633997;
         "Telegram" = 747648890;
         "UTM" = 1538878817;
+        "LastPass" = 6504626762;
       };
       onActivation = {
-        # Using ZAP requires to use --force
+        # Using ZAP no longer requires to use --force
         cleanup = "zap";
-        extraFlags = ["--force"];
+        # extraFlags = ["--force"];
         autoUpdate = true;
         upgrade = true;
       };

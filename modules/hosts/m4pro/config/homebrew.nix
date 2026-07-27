@@ -30,9 +30,9 @@ _: {
         # "AppName" = <app id>;
       };
       onActivation = {
-        # Using ZAP requires to use --force
+        # Using ZAP no longer requires to use --force
         cleanup = "zap";
-        extraFlags = ["--force"];
+        # extraFlags = ["--force"];
         autoUpdate = true;
         upgrade = true;
       };
