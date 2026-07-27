@@ -14,6 +14,7 @@
       pkgs.neovim
       pkgs.pnpm
       pkgs.nodejs_22
+      pkgs.ripgrep
       pkgs.tmux
       pkgs.lazygit
       pkgs.ghostty-bin
