@@ -21,6 +21,7 @@ _: {
         "Telegram" = 747648890;
         "UTM" = 1538878817;
         "LastPass" = 6504626762;
+        "StopTheScript" = 1588394487;
       };
       onActivation = {
         # Using ZAP no longer requires to use --force
