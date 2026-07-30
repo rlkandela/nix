@@ -17,6 +17,7 @@
       pkgs.ripgrep
       pkgs.tmux
       pkgs.lazygit
+      pkgs.tuxedo
       pkgs.ghostty-bin
       pkgs.pyenv
       pkgs.gnupg
