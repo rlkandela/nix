@@ -14,6 +14,7 @@ _: {
         "openvpn-connect"
         "github"
         "warp"
+        "vorssaint"
       ];
       brews = [
         "nvm"
