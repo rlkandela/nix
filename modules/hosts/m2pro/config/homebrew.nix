@@ -6,6 +6,7 @@ _: {
         "diffmerge"
         "warp"
         "qt-creator"
+        "vorssaint"
       ];
       brews = [
         "mas"
@@ -24,6 +25,7 @@ _: {
         "StopTheScript" = 1588394487;
         "AdBlock for Safari" = 1402042596;
         "WireGuard" = 1451685025;
+        "Hidden Bar" = 1452453066;
       };
       onActivation = {
         # Using ZAP no longer requires to use --force
