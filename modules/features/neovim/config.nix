@@ -92,6 +92,11 @@ _: {
         left = "";
         right = "";
       };
+
+      integrations.breadcrumbs = {
+        nvim-navic.enable = true;
+        navbuddy.enable = true;
+      };
     };
 
     tabline.nvimBufferline.enable = true;
@@ -111,10 +116,6 @@ _: {
       colorizer.enable = true;
       modes-nvim.enable = false;
       illuminate.enable = true;
-      breadcrumbs = {
-        enable = true;
-        navbuddy.enable = true;
-      };
       smartcolumn = {
         enable = true;
         setupOpts.colorcolumn = "100";
