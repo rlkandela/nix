@@ -72,25 +72,49 @@ _: {
 
     statusline.lualine = {
       enable = true;
-      theme = "onedark";
-      activeSection = {
-        b = [
-          "{ 'filetype', icon_only = true }"
-          "{ 'filename', path = 4 }"
-        ];
-        c = [];
-        x = [
-          "{ 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } }"
-        ];
-        y = [
-          "{ 'diff', symbols = { added = ' ', modified = ' ', removed = ' ' } }"
-          "{ 'branch', icon = '' }"
-        ];
-      };
+      setupOpts = {
+        sections = {
+          lualine_b = [
+            (lib.generators.mkLuaInline ''{ "filetype", icon_only = true }'')
+            (lib.generators.mkLuaInline ''{ "filename", path = 4 }'')
+          ];
+          lualine_c = [];
+          lualine_x = [
+            (lib.generators.mkLuaInline ''
+              {
+                "diagnostics",
+                symbols = {
+                  error = " ",
+                  warn = " ",
+                  info = " ",
+                  hint = " "
+                 },
+              }
+            '')
+          ];
+          lualine_y = [
+            (lib.generators.mkLuaInline ''
+              {
+                "diff",
+                symbols = {
+                  added = " ",
+                  modified = " ",
+                  removed = " "
+                },
+              }
+            '')
+            (lib.generators.mkLuaInline ''{ "branch", icon = "" }'')
+          ];
+        };
 
-      sectionSeparator = {
-        left = "";
-        right = "";
+        options = {
+          theme = "onedark";
+
+          section_separators = {
+            left = "";
+            right = "";
+          };
+        };
       };
 
       integrations.breadcrumbs = {
