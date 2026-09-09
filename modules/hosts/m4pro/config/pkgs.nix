@@ -16,7 +16,7 @@
       pkgs.bruno
       pkgs.tuxedo
       pkgs.nerd-fonts.jetbrains-mono
-      pkgs.pyenv
+      pkgs.go
       pkgs.nodejs_24
       pkgs.bun
       pkgs.claude-code
