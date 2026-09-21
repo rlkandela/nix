@@ -17,7 +17,6 @@
       pkgs.tuxedo
       pkgs.nerd-fonts.jetbrains-mono
       pkgs.go
-      pkgs.nodejs_24
       pkgs.bun
       pkgs.claude-code
       pkgs.opencode
