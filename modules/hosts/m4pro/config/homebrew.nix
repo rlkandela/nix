@@ -15,6 +15,7 @@ _: {
         "github"
         "warp"
         "vorssaint"
+        "nosqlbooster-for-mongodb"
       ];
       brews = [
         "nvm"
@@ -26,6 +27,8 @@ _: {
         "qemu"
         "watch"
         "luarocks"
+        "python3"
+        "sevenzip"
       ];
       masApps = {
         # "AppName" = <app id>;
