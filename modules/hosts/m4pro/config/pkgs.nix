@@ -14,6 +14,7 @@
       pkgs.neovim
       pkgs.lazygit
       pkgs.bruno
+      pkgs.yaak
       pkgs.tuxedo
       pkgs.nerd-fonts.jetbrains-mono
       pkgs.go
