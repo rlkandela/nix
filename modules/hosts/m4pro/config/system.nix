@@ -29,16 +29,16 @@
           show-recents = false;
           persistent-apps = [
             "/System/Applications/System Settings.app"
-            "/System/Cryptexes/App/System/Applications/Safari.app"
-            # "/Applications/Microsoft Outlook.app"
-            "/Applications/Arc.app"
+            # "/System/Cryptexes/App/System/Applications/Safari.app"
+            "/Applications/Zen.app"
+            # "/Applications/Arc.app"
             "/Applications/Nix Apps/Ghostty.app"
-            "/Applications/Docker.app"
+            # "/Applications/Docker.app"
             "/Applications/Visual Studio Code.app"
             "/Applications/Spotify.app"
             "/Applications/Obsidian.app"
             "/Users/raulcandelaarias/Applications/Excalidraw.app"
-            "/Users/raulcandelaarias/Applications/To Do.app"
+            # "/Users/raulcandelaarias/Applications/To Do.app"
             "/Applications/Slack.app"
           ];
         };

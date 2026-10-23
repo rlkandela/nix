@@ -4,6 +4,7 @@ _: {
       enable = true;
       casks = [
         "arc"
+        "zen"
         "vlc"
         "the-unarchiver"
         "iina"
