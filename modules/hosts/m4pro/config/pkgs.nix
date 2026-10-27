@@ -7,7 +7,7 @@
     nixpkgs.overlays = [
       # self.overlays.ffmpeg
       # self.overlays.helm
-      self.overlays.sqlfluff
+      # self.overlays.sqlfluff
     ];
 
     environment.systemPackages = [
@@ -21,6 +21,7 @@
       pkgs.yaak
       pkgs.tuxedo
       pkgs.nerd-fonts.jetbrains-mono
+      pkgs.secretspec
       pkgs.go
       pkgs.bun
       pkgs.claude-code
