@@ -30,7 +30,6 @@
       pkgs.delve
       pkgs.iperf3
       pkgs.nerd-fonts.jetbrains-mono
-      pkgs.toybox
       pkgs.kubernetes-helm
       pkgs.k3d
       pkgs.claude-code
