@@ -17,6 +17,7 @@ _: {
         "warp"
         "vorssaint"
         "nosqlbooster-for-mongodb"
+        "openplc-editor"
       ];
       brews = [
         "nvm"

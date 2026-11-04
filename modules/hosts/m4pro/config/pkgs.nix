@@ -8,6 +8,7 @@
       # self.overlays.ffmpeg
       # self.overlays.helm
       # self.overlays.sqlfluff
+      self.overlays.opencode
     ];
 
     environment.systemPackages = [
