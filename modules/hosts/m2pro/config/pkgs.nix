@@ -1,6 +1,11 @@
-{inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.modules.darwin.m2proPkgs = {pkgs, ...}: {
     nixpkgs.overlays = [
+      self.overlays.opencode
       # self.overlays.ffmpeg
       # self.overlays.helm
     ];
