@@ -7,6 +7,7 @@ _: {
         "warp"
         "qt-creator"
         "vorssaint"
+        "openplc-editor"
       ];
       brews = [
         "mas"
