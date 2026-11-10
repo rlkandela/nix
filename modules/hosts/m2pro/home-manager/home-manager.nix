@@ -1,20 +1,18 @@
-{ self, ... }:
-{
-  flake.modules.darwin.m2proHomeManager =
-    { ... }:
-    {
-      imports = [
-        self.modules.darwin.homeManager
-      ];
+{self, ...}: {
+  flake.modules.darwin.m2proHomeManager = {...}: {
+    imports = [
+      self.modules.darwin.homeManager
+    ];
 
-      my.homeManager = {
-        enable = true;
-        primaryUser = "rlkandela";
-        sharedModules = [
-          self.modules.homeManager.ghosttyConfig
-          self.modules.homeManager.m2proHomeManagerSettings
-          self.modules.homeManager.neovim
-        ];
-      };
+    my.homeManager = {
+      enable = true;
+      primaryUser = "rlkandela";
+      sharedModules = [
+        self.modules.homeManager.ghosttyConfig
+        self.modules.homeManager.macGhosttyDropdown
+        self.modules.homeManager.m2proHomeManagerSettings
+        self.modules.homeManager.neovim
+      ];
     };
+  };
 }

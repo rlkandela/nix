@@ -25,6 +25,17 @@ _: {
         # Shell
         shell-integration = "detect";
         shell-integration-features = "cursor,sudo,title";
+
+        # Quick Terminal (Quake-Style)
+        quick-terminal-position = "top";
+        quick-terminal-size = "50%";
+        quick-terminal-animation-duration = 0.15;
+        quick-terminal-autohide = false;
+        quick-terminal-space-behavior = "move";
+        quick-terminal-screen = "mouse";
+
+        # Applescript
+        macos-applescript = true;
       };
     };
   };

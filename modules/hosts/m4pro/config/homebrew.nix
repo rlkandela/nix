@@ -8,7 +8,6 @@ _: {
         "vlc"
         "the-unarchiver"
         "iina"
-        "hammerspoon"
         "iterm2"
         "obsidian"
         "hiddenbar"
