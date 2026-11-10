@@ -26,6 +26,9 @@ _: {
         shell-integration = "detect";
         shell-integration-features = "cursor,sudo,title";
 
+        # Window
+        window-save-state = "never";
+
         # Quick Terminal (Quake-Style)
         quick-terminal-position = "top";
         quick-terminal-size = "50%";

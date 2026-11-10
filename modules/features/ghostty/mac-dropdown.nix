@@ -16,7 +16,15 @@ _: {
     home.packages = [
       (pkgs.writeShellScriptBin "ghostty-dropdown" ''
         /usr/bin/osascript <<'APPLESCRIPT'
-        tell application "Ghostty" to activate
+        tell application "System Events"
+          if not (exists process "Ghostty") then
+            tell application "Ghostty" to activate
+              
+            repeat until exists process "Ghostty"
+              delay 0.1
+            end repeat
+          end if
+        end tell
 
         tell application "System Events"
             tell process "Ghostty"
