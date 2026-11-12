@@ -10,10 +10,14 @@
       self.modules.darwin.macGhosttyDropdown
     ];
 
-    nix.settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    nix.settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+
+      auto-optimise-store = true;
+    };
 
     # System user
     users.users.rlkandela = {
