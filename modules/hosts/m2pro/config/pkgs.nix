@@ -15,6 +15,7 @@
       pkgs.fzf
       pkgs.isort
       pkgs.alacritty
+      pkgs.vlc-bin
       pkgs.mkalias
       pkgs.neovim
       pkgs.pnpm
