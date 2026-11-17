@@ -6,7 +6,6 @@
       self.modules.darwin.m4proHomebrew
       self.modules.darwin.m4proHomeManager
       self.modules.darwin.m4proShellAliases
-      self.modules.darwin.appsInSpotlight
       self.modules.darwin.macGhosttyDropdown
     ];
 
