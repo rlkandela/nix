@@ -216,7 +216,7 @@ _: {
       html.enable = true;
       css.enable = true;
       sql.enable = true;
-      rust.enable = false;
+      rust.enable = true;
 
       python = {
         enable = true;
