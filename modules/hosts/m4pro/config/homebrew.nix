@@ -3,7 +3,6 @@ _: {
     homebrew = {
       enable = true;
       casks = [
-        "arc"
         "zen"
         "vlc"
         "the-unarchiver"
@@ -16,7 +15,6 @@ _: {
         "warp"
         "vorssaint"
         "nosqlbooster-for-mongodb"
-        "openplc-editor"
       ];
       brews = [
         "nvm"
@@ -29,7 +27,6 @@ _: {
         "watch"
         "luarocks"
         "python3"
-        "sevenzip"
       ];
       masApps = {
         # "AppName" = <app id>;
